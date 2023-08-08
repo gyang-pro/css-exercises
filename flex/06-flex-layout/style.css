@@ -5,6 +5,11 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  /* Makes header and footer stay at top and bottom even when window is resized */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +21,9 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  /* my code */
+  padding: 5px 10px;
 }
 
 input {
@@ -24,4 +32,46 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+/* my solution */
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-links, .right-links {
+  display: flex;
+  gap: 16px;
+}
+/* instead of using left-links and right-links, can add all to ul instead
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px
+}*/
+
+.footer {
+  background-color: #eeeeee;
+}
+
+/* allows content to stay centered even at it's smallest size */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
