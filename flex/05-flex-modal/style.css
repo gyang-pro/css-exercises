@@ -20,6 +20,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+
+  /* additional code to add flexbox */
+  display: flex;
+  gap: 15px;
+  padding: 15px;
 }
 
 .icon {
@@ -33,6 +38,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* keeps icon from getting flattened by flexbox */
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -66,4 +74,20 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/* my solution */
+.header {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* flexbox with columns keep header and close-button from getting squeezed together */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
