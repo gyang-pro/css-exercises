@@ -13,6 +13,7 @@ body {
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
 
+  /* add flexbox to push items to left and right of header */
   display: flex;
   justify-content: space-between;
   padding: 8px;
@@ -50,7 +51,9 @@ a {
 ul {
   list-style-type: none;
 
+  /* undo default margins and padding for lists*/
   padding: 0;
+  margin: 0;
   display: flex;
   gap: 16px;
 }
@@ -58,5 +61,6 @@ ul {
 .left-div, .right-div {
   display: flex;
   gap: 16px;
+  /* allows items to keep their original height and not grow to container height*/
   align-items: center;
 }
